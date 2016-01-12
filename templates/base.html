@@ -1,0 +1,52 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %} NogSon | Beta {% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link href="{{ url_for('static', filename = 'estiloextra.css') }}" rel='stylesheet'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block navbar %} 
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navitagione">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">NogSon | Beta</a>
+        </div>
+
+        <!-- Coleccion de links del menu, formas y otro contenido para [toggling] -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/">Acerca</a>
+                </li>
+                <li>
+                  <a href="{{url_for('fila')}}">La Fila</a>
+                </li>
+                <li>
+                  <a href="{{url_for('clima')}}">Clima</a>
+                </li>
+            </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content  %}
+<div class="jumbotron" >
+  <div class="container">
+    <div class="row">
+        <img class="center-block img-rounded img-responsive" src= {{ url_for('static', filename = "los_arcos.jpg") }}>
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% block page_content %} {% endblock %}
+</div>
+{% endblock %}

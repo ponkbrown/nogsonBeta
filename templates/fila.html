@@ -1,0 +1,67 @@
+{% extends "base.html" %} 
+
+{% block page_content %}
+<h2>Cruce fronterizo</h2>
+<p> Tiempo de espera para los cruces fronterizos</p>
+<p> Actualizado: {{fecha}}</p>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Morley</th>
+      <th>Puertas</th>
+      <th>Tiempo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td><i class="fa fa-male"></i></td> 
+      <td>{{ morley['peat'][0] }}</td>
+      <td>{{ morley['peat'][1] }} Minutos</td>
+    </tr>
+  </tbody>
+  </tbody>
+  
+</table>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Deconcini</th>
+      <th>Puertas</th>
+      <th>Tiempo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td><i class="fa fa-car"></i></td> 
+      <td>{{ deconcini['vehic'][0] }}</td>
+      <td>{{ deconcini['vehic'][1] }} Minutos</td>
+    </tr>
+    <tr class="info">
+      <td><i class="fa fa-male"></i></td> 
+      <td>{{ deconcini['peat'][0] }}</td>
+      <td>{{ deconcini['peat'][1] }} Minutos</td>
+    </tr>
+  </tbody>
+  </tbody>
+  
+</table>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Mariposa</th>
+      <th>Puertas</th>
+      <th>Tiempo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td><i class="fa fa-car"></i></td> 
+      <td>{{ mariposa['vehic'][0] }}</td>
+      <td>{{ mariposa['vehic'][1] }} Minutos</td>
+    </tr>
+  </tbody>
+  </tbody>
+  
+</table>
+
+{% endblock %}
