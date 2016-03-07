@@ -12,7 +12,7 @@ def cbp(site='http://apps.cbp.gov/bwt/bwt.xml'):
         xml = response.text
     else:
         print ("Hubo un error de conexión")
-        return 0
+        quit()
     return xml
 
 def laFila(xml):
